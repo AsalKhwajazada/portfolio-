@@ -1,255 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-   
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asal Khwajazada | Portfolio </title>
-    <link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal portfolio of Asal Khwajazada, a learner interested in technology, education, and youth empowerment.">
+  <title>Asal Khwajazada | Personal Portfolio</title>
+
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <h2>Asal Khwajazada</h2>
-          <ul>
-              <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#skills">Interests</a></li> 
-            <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-               <li><a href="#contact">Contact</a></li>
-</ul>
-        </nav>
-    </header>
-    <section id="home" class="hero">
 
-    <div class="hero-text">
-        <p class="intro">Hello, I'm </p>
-        <h1>Asal Khwajazada</h1>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo">Asal<span>.</span></a>
 
-   <h2>Learner • Mentor • Aspiring Technologist</h2>
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <p>
-            I'm passionate about learning, personal growth, technology and creating meaningful opportunities through education.
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#journey" class="nav-link">My Journey</a>
+        <a href="#skills" class="nav-link">Interests</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Switch to dark mode"
+        title="Change theme"
+      >☾</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <p class="eyebrow">WELCOME TO MY PERSONAL SPACE</p>
+
+          <h1>Hello, I'm <span>Asal Khwajazada</span></h1>
+
+          <h2 class="hero-subtitle">
+            A learner, a dreamer, and a future
+            <span id="typing-text">Web Developer</span><span class="typing-cursor">|</span>
+          </h2>
+
+          <p class="hero-description">
+            I believe that learning can open doors, even when the path is
+            difficult. I'm continuing my education, exploring web development,
+            and working toward a future where I can make a meaningful difference.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary">Get to Know Me</a>
+            <a href="#projects" class="btn btn-outline">Explore My Work</a>
+          </div>
+
+          <p class="hero-note">Learning at my own pace, growing every day.</p>
+        </div>
+
+        <div class="hero-image reveal">
+          <div class="portrait-frame">
+            <img
+              src="asal image .jpg"
+              alt="Portrait of Asal Khwajazada"
+            >
+          </div>
+          <div class="image-caption">
+            <span class="caption-dot"></span>
+            Always learning, always growing
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-soft" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">A LITTLE ABOUT ME</p>
+          <h2>My Story, My <span>Purpose</span></h2>
+          <p>Every journey has a story. This is a little part of mine.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h3>Growing through learning</h3>
+
+            <p>
+              My name is Asal, and I'm someone who believes that education
+              is more than earning a certificate. For me, it means gaining
+              confidence, discovering new possibilities, and becoming more
+              independent.
+            </p>
+
+            <p>
+              After facing interruptions in my education, I'm continuing
+              to learn and explore different opportunities. I'm currently
+              studying through the Amala Global Secondary Diploma program
+              and learning web development.
+            </p>
+            <p>
+              I'm also interested in psychology, youth empowerment, and
+              creating supportive learning spaces where young people,
+              especially girls, can feel encouraged to learn and grow.
+            </p>
+
+            <p>
+              I don't have everything figured out yet, but I'm willing to
+              keep learning, make mistakes, and take the next step.
+            </p>
+          </div>
+
+          <div class="about-cards reveal">
+            <article class="info-card">
+              <span class="card-icon">✦</span>
+              <h3>My Values</h3>
+              <p>Education, kindness, independence, and personal growth.</p>
+            </article>
+
+            <article class="info-card">
+              <span class="card-icon">♡</span>
+              <h3>My Interests</h3>
+              <p>Technology, psychology, writing, and youth empowerment.</p>
+            </article>
+
+            <article class="info-card">
+              <span class="card-icon">⌘</span>
+              <h3>My Direction</h3>
+              <p>Building my skills and exploring opportunities for the future.</p>
+            </article>
+
+            <article class="info-card">
+              <span class="card-icon">✧</span>
+              <h3>My Mindset</h3>
+              <p>Progress over perfection, one step at a time.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="section" id="journey">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">MY JOURNEY</p>
+          <h2>Small Steps, <span>Big Dreams</span></h2>
+          <p>Some of the learning experiences that are shaping my journey.</p>
+        </div>
+
+        <div class="journey-grid">
+
+          <article class="journey-card reveal">
+            <span class="journey-number">01</span>
+            <p class="journey-label">EDUCATION</p>
+            <h3>Continuing My Studies</h3>
+            <p>
+              Returning to structured learning and working toward my
+              secondary education through the Amala program.
+            </p>
+          </article>
+
+          <article class="journey-card reveal">
+            <span class="journey-number">02</span>
+            <p class="journey-label">TECHNOLOGY</p>
+            <h3>Learning Web Development</h3>
+            <p>
+              Exploring HTML, CSS, JavaScript, and other technologies
+              while building my first projects.
+            </p>
+          </article>
+
+          <article class="journey-card reveal">
+            <span class="journey-number">03</span>
+            <p class="journey-label">LEADERSHIP</p>
+            <h3>Supporting Others</h3>
+            <p>
+              Learning through mentoring, supervision, collaboration,
+              and supporting other learners.
+            </p>
+          </article>
+
+          <article class="journey-card reveal">
+            <span class="journey-number">04</span>
+            <p class="journey-label">PERSONAL GROWTH</p>
+            <h3>Becoming More Independent</h3>
+            <p>
+              Developing confidence, discipline, and the skills I need
+              to work toward my long-term goals.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests and skills -->
+    <section class="section section-soft" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">WHAT I'M EXPLORING</p>
+          <h2>My Skills & <span>Interests</span></h2>
+          <p>I'm still learning, and these are some areas I enjoy exploring.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">&lt;/&gt;</div>
+            <h3>Web Development</h3>
+            <p>Learning how websites are designed, structured, and built.</p>
+            <div class="skill-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">✎</div>
+            <h3>Writing & Communication</h3>
+            <p>Expressing ideas, sharing thoughts, and communicating clearly.</p>
+            <div class="skill-tags">
+              <span>Writing</span>
+              <span>English</span>
+              <span>Communication</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">♡</div>
+            <h3>Psychology</h3>
+            <p>Exploring human behavior, emotions, and personal development.</p>
+            <div class="skill-tags">
+              <span>Human Behavior</span>
+              <span>Well-being</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">✧</div>
+            <h3>Leadership & Mentoring</h3>
+            <p>Learning to support others, collaborate, and take responsibility.</p>
+            <div class="skill-tags">
+              <span>Teamwork</span>
+              <span>Mentoring</span>
+              <span>Leadership</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="skills-note">
+          I'm a learner, so my skills are still developing with practice.
         </p>
+      </div>
+    </section>
 
-        <a href="#about" class="btn">Discover My Journey</a>
-    </div>
-    
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">MY WORK</p>
+          <h2>Projects I'm <span>Building</span></h2>
+          <p>A few projects that reflect what I've been learning.</p>
+        </div>
 
-<div class="hero-image">
-    <img src="asal image .jpg" alt="Asal Khwajazada">
-</div>
-</section>
-<section id="about" class="about">
+        <div class="projects-grid">
 
-    <div class="about-text">
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="calculator 1.png"
+                alt="Screenshot of my calculator project"
+                loading="lazy"
+              >
+              <span class="project-badge">Project 01</span>
+            </div>
 
-        <p class="section-title">About Me</p>
+            <div class="project-content">
+              <p class="project-category">WEB DEVELOPMENT</p>
+              <h3>Math Magician</h3>
+              <p>
+                A calculator project created as part of my journey into
+                web development and building interactive websites.
+              </p>
 
-        <h2>More than a learner, always becoming.</h2>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
 
-        <p>
-            My name is Asal Khwajazada. I'm someone who believes that
-            learning can open new doors and create new possibilities.
+              <p class="project-status">Personal learning project</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="restaurent reservation 1.png"
+                alt="Screenshot of my restaurant reservation website"
+                loading="lazy"
+              >
+              <span class="project-badge">Project 02</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-category">WEBSITE DESIGN</p>
+              <h3>Restaurant Reservation</h3>
+              <p>
+                A website project where I practiced arranging content,
+                designing page layouts, and presenting information clearly.
+              </p>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Layout</span>
+              </div>
+
+              <p class="project-status">Project preview</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="website 1.png"
+                alt="Screenshot of another website project"
+                loading="lazy"
+              >
+              <span class="project-badge">Project 03</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-category">WEB DESIGN</p>
+              <h3>Website Project</h3>
+              <p>
+                Another step in my learning journey, helping me practice
+                website structure, styling, and visual presentation.
+              </p>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Design</span>
+              </div>
+
+              <p class="project-status">Project preview</p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="projects-note">
+          More projects will be added as I continue learning.
         </p>
+      </div>
+    </section>
 
-        <p>
-            My journey has taken me through education, mentoring,
-            writing, research, and technology. I enjoy exploring new
-            ideas, developing new skills, and learning through experience.
-        </p>
-
-        <p>
-            Currently, I'm continuing my education while exploring
-            programming and web development. I'm also interested in
-            youth empowerment and creating meaningful opportunities
-            through learning.
-        </p>
-
-    </div>
-
-</section>
-
-<section id="journey" class="journey">
-
-           <p class="section-title">My journey</p>
-
-        <h2>Learning, Growing & Exploring</h2>
-        <div class="journey container"></div>
-        <div class ="journey-card">
-        <h3>Education</h3>
-        <p>
-           Continuing my education and working toward new opportunities for my academic future.
-        </p>
+    <!-- Education -->
+    <section class="section section-soft" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">MY EDUCATION</p>
+          <h2>Always a <span>Learner</span></h2>
+          <p>Education is an ongoing part of my life.</p>
         </div>
-        <div class="journey-card"></div>
-        <h3>Writing & Research</h3>
-        <p>
-            Exploring ideas through writing, research, communication and creative thinking.
-        </p>
-    </div>
-<div class="journey-card">
-    <h3>Technology</h3>
-    <p>
-        Exploring programming and web development while building practical projects and new skills.
-    </p>
-</div>
-</section>
-<<section id="skills" class="skills">
 
-    <p class="section-title">What I Bring</p>
+        <div class="education-list">
 
-    <h2>My Interests & Strengths</h2>
+          <article class="education-card reveal">
+            <div class="education-icon">01</div>
+            <div>
+              <p class="education-type">SECONDARY EDUCATION</p>
+              <h3>Amala Global Secondary Diploma</h3>
+              <p>
+                Continuing my education, strengthening my knowledge,
+                and working toward future academic opportunities.
+              </p>
+            </div>
+          </article>
 
-    <div class="skills-container">
+          <article class="education-card reveal">
+            <div class="education-icon">02</div>
+            <div>
+              <p class="education-type">TECHNOLOGY</p>
+              <h3>Web Development & Programming</h3>
+              <p>
+                Learning web development through courses and hands-on
+                practice, from the basics toward more advanced skills.
+              </p>
+            </div>
+          </article>
 
-        <div class="skill-card">
-            <h3>Learning</h3>
+          <article class="education-card reveal">
+            <div class="education-icon">03</div>
+            <div>
+              <p class="education-type">LANGUAGE LEARNING</p>
+              <h3>English Language Studies</h3>
+              <p>
+                Continuing to improve my English and communicate more
+                confidently in academic and professional settings.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Every Connection Starts <span>Somewhere</span></h2>
+          <p>
+            I'm always happy to connect with people who value learning,
+            technology, and positive change.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h3>Get in touch</h3>
             <p>
-                I enjoy learning new things and continuously developing
-                my knowledge and skills.
+              Whether you'd like to talk about a project, learning
+              opportunities, or shared interests, feel free to reach out.
             </p>
-        </div>
 
-        <div class="skill-card">
-            <h3>Mentoring</h3>
-            <p>
-                I enjoy supporting others, sharing knowledge, and
-                learning together.
-            </p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Communication</h3>
-            <p>
-                Writing and communication are important parts of
-                how I express ideas and connect with others.
-            </p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Technology</h3>
-            <p>
-                I'm exploring programming and web development
-                and building my skills through practice.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="projects" class="projects">
-
-    <p class="section-title">My Projects</p>
-
-    <h2>Things I've Created</h2>
-
-    <div class="projects-container">
-
-        <div class="project-card">
-            <img src="calculator 1.png" alt="Math Magician Project">
-            <h3>Math Magician</h3>
-            <p>
-                A calculator project created with HTML and CSS.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <img src="restaurent reservation 1.png" alt="Restaurant Reservation Project"> 
-            <h3>Restaurant Reservation</h3>
-            <p>
-                A simple restaurant reservation website project.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <img src="website 1.png" alt="Website Project">
-            <h3>Website Project</h3>
-            <p>
-                A website project created while learning web development.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-<section id="education" class="education">
-
-    <p class="section-title">Education & Learning</p>
-
-    <h2>My Path of Learning</h2>
-
-    <div class="education-container">
-
-        <div class="education-card">
-            <h3>Secondary Education</h3>
-            <p>
-                Continuing my secondary education and working toward
-                my academic goals and future university opportunities.
-            </p>
-        </div>
-
-        <div class="education-card">
-            <h3>Technology & Programming</h3>
-            <p>
-                Learning programming, web development, and building
-                practical projects as I explore the world of technology.
-            </p>
-        </div>
-
-        <div class="education-card">
-            <h3>Continuous Learning</h3>
-            <p>
-                I believe learning is a continuous journey. I keep
-                developing my skills through courses, projects,
-                mentoring, and new experiences.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-<section id="contact" class="contact">
-
-    <p class="section-title">Contact</p>
-
-    <h2>Let's Connect</h2>
-
-    <p>
-        If you would like to connect with me, feel free to reach out.
-    </p>
-
-    <div class="contact-info">
-
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:asalakkhaja@gmail.com">asalakkhaja@gmail.com</a>
-        </p>
-
-        <p>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/asal-khwajazada-40725a380/" target="_blank">
-                My LinkedIn
+            <a class="contact-link" href="mailto:asalakkhaja@gmail.com">
+              <span class="contact-symbol">@</span>
+              <span>
+                <small>Email</small>
+                <strong>asalakkhaja@gmail.com</strong>
+              </span>
             </a>
-        </p>
 
-        <p>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/AsalKhwajazada" target="_blank">
-                My GitHub
+            <aclass="contact-link"
+              href="https://www.linkedin.com/in/asal-khwajazada-40725a380/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-symbol">in</span>
+              <span>
+                <small>LinkedIn</small>
+                <strong>Connect with me</strong>
+              </span>
+            </aclass=>
+
+            <a
+              class="contact-link"
+              href="https://github.com/AsalKhwajazada"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-symbol">&lt;/&gt;</span>
+              <span>
+                <small>GitHub</small>
+                <strong>Explore my repositories</strong>
+              </span>
             </a>
-        </p>
+          </div>
 
-    </div>
+          <form class="contact-form reveal" id="contact-form">
+            <h3>Send a message</h3>
 
-</section>
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+              minlength="2"
+            >
+
+            <label for="email">Your email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            >
+
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here..."
+              required
+              minlength="5"
+            ></textarea>
+
+            <button class="btn btn-primary form-submit" type="submit">
+              Prepare Email <span>↗</span>
+            </button>
+
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+
+            <p class="form-note">
+              This form prepares an email in your email app. It does not
+              send or store messages on a server.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a href="#home" class="logo footer-logo">Asal<span>.</span></a>
+
+      <p>Learning, growing, and creating my own path.</p>
+
+      <p class="copyright">
+        © <span id="current-year"></span> Asal Khwajazada. Made with care.
+      </p>
     </div>
-</section>
-<footer>
-    <p>© 2026 Asal Khwajazada. All rights reserved.</p>
-</footer>
+  </footer>
+
+  <!-- Back to top -->
+  <button
+    class="back-to-top"
+    id="back-to-top"
+    aria-label="Back to top"
+    title="Back to top"
+  >↑</button>
+
 </body>
-</html>>
+</html>
