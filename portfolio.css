@@ -862,8 +862,9 @@ textarea:focus-visible {
 
 .reveal {
   opacity: 0;
-  transform: translateY(0);
+  transform: translateY(24px);
   transition: opacity 0.65s ease, transform 0.65s ease;
+
 }
 
 .reveal.show {

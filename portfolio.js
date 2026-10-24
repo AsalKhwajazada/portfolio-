@@ -51,10 +51,28 @@ window.addEventListener("resize", () => {
 // ===============================
 
 const themeToggle = document.querySelector("#theme-toggle");
-const savedTheme = localStorage.getItem("asal-portfolio-theme");
+const THEME_KEY = "asal-portfolio-theme";
+
+// localStorage can throw (private browsing, blocked storage),
+// so reads and writes are wrapped in try/catch.
+function getSavedTheme() {
+  try {
+    return localStorage.getItem(THEME_KEY);
+  } catch (error) {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch (error) {
+    // Ignore: the theme still works for this visit.
+  }
+}
 
 // Restore the previously selected theme.
-if (savedTheme === "dark") {
+if (getSavedTheme() === "dark") {
   document.body.classList.add("dark-theme");
 }
 
@@ -75,11 +93,7 @@ themeToggle.addEventListener("click", () => {
 
   const isDark = document.body.classList.contains("dark-theme");
 
-  localStorage.setItem(
-    "asal-portfolio-theme",
-    isDark ? "dark" : "light"
-  );
-
+  saveTheme(isDark ? "dark" : "light");
   updateThemeButton();
 });
 
@@ -110,10 +124,7 @@ function typeEffect() {
     characterIndex++;
   }
 
-  typingText.textContent = currentPhrase.substring(
-    0,
-    characterIndex
-  );
+  typingText.textContent = currentPhrase.substring(0, characterIndex);
 
   let delay = isDeleting ? 45 : 85;
 
@@ -130,9 +141,7 @@ function typeEffect() {
 }
 
 // Respect reduced-motion preferences.
-const reducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-);
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (reducedMotion.matches) {
   typingText.textContent = phrases[0];
@@ -170,6 +179,8 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
     element.classList.add("show");
   });
 }
+
+
 // ===============================
 // 5. ACTIVE NAVIGATION LINK
 // ===============================
@@ -184,7 +195,7 @@ if ("IntersectionObserver" in window) {
           const sectionId = entry.target.id;
 
           navItems.forEach((link) => {
-            const isActive = link.getAttribute("href") === #${sectionId};
+            const isActive = link.getAttribute("href") === `#${sectionId}`;
 
             link.classList.toggle("active", isActive);
           });
@@ -258,21 +269,19 @@ contactForm.addEventListener("submit", (event) => {
   const email = document.querySelector("#email").value.trim();
   const message = document.querySelector("#message").value.trim();
 
-  if (!name  !email  !message) {
+  if (!name || !email || !message) {
     formStatus.textContent = "Please complete all fields.";
     return;
   }
 
-  const subject = encodeURIComponent(
-    Portfolio message from ${name}
-  );
+  const subject = encodeURIComponent(`Portfolio message from ${name}`);
 
   const body = encodeURIComponent(
-    Hello Asal,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}
+    `Hello Asal,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`
   );
 
   const emailLink =
-    mailto:asalakkhaja@gmail.com?subject=${subject}&body=${body};
+    `mailto:asalakkhaja@gmail.com?subject=${subject}&body=${body}`;
 
   formStatus.textContent =
     "Your email app should open with your message prepared.";
